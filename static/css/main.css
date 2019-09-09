@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url(/static/fonts/OpenSans-Regular.ttf) format("truetype");
+}
+* {
+  font-family: 'OpenSans', sans-serif;
+}
+html {
+  height: 100%;
+  min-height: 100%;
+  background-color: #F8F8F8;
+}
+body {
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+}
+a {
+  color: #315EEE;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+code {
+  font-family: monospace;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+img {
+  max-width: 100%;
+}
+img.file {
+  display: block;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  background:white;
+  box-shadow: 0px 1px 0px 0px#fafafa,0px 1px 4px 0px rgba(0,0,0,.12);
+  margin-bottom: 1rem;
+}
+.promo {
+  font-size: .8em;
+  text-align: center;
+}
+nav {
+  margin: .25rem 0 .5rem;
+}
+nav a {
+  color: #2A2B32;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+nav a img {
+  margin-right: .25rem;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.sticky-footer {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+footer .links {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+svg.code {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: sub;
+  color: #41933E;
+  margin-right: .25rem;
+}
+svg.heart {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: sub;
+  color: #DA3E39;
+  margin: 0 .15rem;
+}
+
+.submit {
+  grid-area: submit;
+}
+.submit button {
+  background: #EB6671;
+  border: none;
+  cursor: pointer;
+  height: 2.25rem;
+  width: 10rem;
+  color: white;
+  border-radius: .25rem;
+  margin-top: .5rem;
+}
+.submit button:hover {
+  background: #EB525E;
+}
+
+.content {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.flashes {
+  text-align: center;
+  color: #EB525E;
+}
