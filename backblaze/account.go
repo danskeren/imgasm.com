@@ -23,17 +23,6 @@ type AuthorizeAccount struct {
 	RecommendedPartSize int    `json:"recommendedPartSize"`
 }
 
-func init() {
-	authorizeAccount, err := B2AuthorizeAccount()
-	if err != nil {
-		panic(err)
-	}
-	B2UploadURL, err = B2GetUploadURL(authorizeAccount)
-	if err != nil {
-		panic(err)
-	}
-}
-
 func B2AuthorizeAccount() (AuthorizeAccount, error) {
 	var authorizeAccount AuthorizeAccount
 	req, err := http.NewRequest("GET", fmt.Sprintf("%s/b2api/v2/b2_authorize_account", config.File().GetString("backblaze.rootUrl")), nil)

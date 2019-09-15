@@ -19,8 +19,6 @@ type UploadURL struct {
 	UploadURL          string `json:"uploadUrl"`
 }
 
-var B2UploadURL UploadURL
-
 func B2GetUploadURL(authorizeAccount AuthorizeAccount) (UploadURL, error) {
 	var b2UploadURL UploadURL
 	body := strings.NewReader(fmt.Sprintf("{\"bucketId\": \"%s\"}", authorizeAccount.Allowed.BucketID))
@@ -41,7 +39,15 @@ func B2GetUploadURL(authorizeAccount AuthorizeAccount) (UploadURL, error) {
 	return b2UploadURL, nil
 }
 
-func B2Upload(file models.File, uploadURL UploadURL) error {
+func B2Upload(file models.File) error {
+	authorizeAccount, err := B2AuthorizeAccount()
+	if err != nil {
+		return err
+	}
+	uploadURL, err := B2GetUploadURL(authorizeAccount)
+	if err != nil {
+		return err
+	}
 	req, err := http.NewRequest("POST", uploadURL.UploadURL, bytes.NewReader(file.Body))
 	if err != nil {
 		return err
