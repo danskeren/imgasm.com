@@ -142,7 +142,7 @@ func UploadPOST(w http.ResponseWriter, r *http.Request) {
 		MimeType:  kind.MIME.Value,
 		Extension: kind.Extension,
 	}
-	if err = backblaze.B2Upload(image, backblaze.B2UploadURL); err != nil {
+	if err = backblaze.B2Upload(image); err != nil {
 		renderTemplateWithError(w, r, err, "index.html")
 		return
 	}
