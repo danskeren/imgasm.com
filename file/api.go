@@ -12,7 +12,7 @@ import (
 	"github.com/danskeren/imgasm.com/db"
 	"github.com/danskeren/imgasm.com/models"
 	"github.com/danskeren/imgasm.com/templates"
-	"github.com/dgraph-io/badger"
+	"github.com/dgraph-io/badger/v2"
 	"github.com/go-chi/chi"
 	"github.com/h2non/bimg"
 	"github.com/h2non/filetype"

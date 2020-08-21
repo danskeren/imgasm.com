@@ -6,7 +6,7 @@ import (
 
 	"github.com/danskeren/imgasm.com/db"
 	"github.com/danskeren/imgasm.com/models"
-	"github.com/dgraph-io/badger"
+	"github.com/dgraph-io/badger/v2"
 	"github.com/packago/generate"
 )
 
