@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/danskeren/imgasm.com/db"
 	"github.com/gorilla/csrf"
 	"github.com/packago/config"
 	"github.com/packago/cookie"
+	"imgasm.com/db"
 )
 
 type CommonData struct {
