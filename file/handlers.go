@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"math"
 
-	"github.com/danskeren/imgasm.com/db"
-	"github.com/danskeren/imgasm.com/models"
 	"github.com/dgraph-io/badger/v2"
 	"github.com/packago/generate"
+	"imgasm.com/db"
+	"imgasm.com/models"
 )
 
 func calculateFitDimension(imageWidth, imageHeight, fitWidth, fitHeight int) (int, int) {

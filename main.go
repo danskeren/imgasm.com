@@ -6,14 +6,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/danskeren/imgasm.com/file"
-	"github.com/danskeren/imgasm.com/templates"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
 	"github.com/packago/config"
 	limiter "github.com/ulule/limiter/v3"
 	"github.com/ulule/limiter/v3/drivers/middleware/stdlib"
 	"github.com/ulule/limiter/v3/drivers/store/memory"
+	"imgasm.com/file"
+	"imgasm.com/templates"
 )
 
 const ViewLimit = "150-H"

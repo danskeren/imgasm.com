@@ -8,16 +8,16 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/danskeren/imgasm.com/backblaze"
-	"github.com/danskeren/imgasm.com/db"
-	"github.com/danskeren/imgasm.com/models"
-	"github.com/danskeren/imgasm.com/templates"
 	"github.com/dgraph-io/badger/v2"
 	"github.com/go-chi/chi"
 	"github.com/h2non/bimg"
 	"github.com/h2non/filetype"
 	"github.com/packago/config"
 	"github.com/packago/cookie"
+	"imgasm.com/backblaze"
+	"imgasm.com/db"
+	"imgasm.com/models"
+	"imgasm.com/templates"
 )
 
 const MaxFileSize int64 = 1024 * 1024 * 10 // 10 MB

@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/danskeren/imgasm.com/models"
 	"github.com/packago/config"
+	"imgasm.com/models"
 )
 
 type UploadURL struct {
